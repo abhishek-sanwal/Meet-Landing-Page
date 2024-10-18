@@ -1,0 +1,37 @@
+.rectangle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.6rem;
+  height: 5.6rem;
+  border: solid rgba(135, 135, 157, 0.25) 1px;
+  border-radius: 50%;
+  background-color: var(--color-light-gray);
+}
+
+.rectangle > .paragraph-style {
+  margin: 0;
+}
+
+.horizontal-line {
+  border-left: solid rgba(135, 135, 157, 0.25) 1px;
+  height: 8.4rem;
+}
+.divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6.4rem 0;
+}
+
+@media (min-width: 48em) {
+  .divider {
+    margin: 8rem 0 6.7rem;
+  }
+}
+@media (min-width: 90em) {
+  .divider {
+    margin: 11rem 0 6.4rem;
+  }
+}

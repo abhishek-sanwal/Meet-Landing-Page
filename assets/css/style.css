@@ -1,0 +1,255 @@
+:root {
+  /* COLORS */
+
+  /* Primary */
+  --color-primary-1: #4d96a8;
+  --color-primary-2: #855fb1;
+  --color-dark: #28283d;
+  --color-gray: #87879d;
+
+  /* Secondary */
+  --color-secondary-1: #8fe3f9;
+  --color-secondary-2: #d9b8ff;
+  --color-light-gray: #fafafa;
+
+  /* FONT FAMILY */
+  --main-font-family: "Red Hat Display";
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body,
+body *,
+body *::after,
+body *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font-family), sans-serif;
+  font-weight: 500;
+  color: var(--color-gray);
+
+  background-color: var(--color-light-gray);
+}
+
+a {
+  display: inline-block;
+}
+
+/******************* Typography ***********************************************************/
+
+.heading-primary,
+.heading-secondary {
+  color: var(--color-dark);
+  font-weight: 900;
+  text-align: center;
+  max-width: 44.5rem;
+}
+
+.heading-primary {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 0.6em;
+}
+
+.heading-secondary {
+  font-size: 3.2rem;
+  line-height: 1.125;
+  margin-bottom: 0.75em;
+}
+
+.overline {
+  color: var(--color-primary-1);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
+}
+
+.paragraph-style {
+  font-size: 1.6rem;
+  line-height: 1.625;
+  text-align: center;
+  max-width: 54rem;
+  margin-bottom: 2.125em;
+}
+
+@media (min-width: 48em) {
+  .heading-primary {
+    font-size: 4.8rem;
+    line-height: 1;
+    margin-bottom: 0.5em;
+  }
+
+  .heading-secondary {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 0.8em;
+  }
+
+  .paragraph-style {
+    margin-bottom: 2em;
+  }
+
+  .overline {
+    margin-bottom: 1.6em;
+  }
+
+  @media (min-width: 90em) {
+    .heading-primary {
+      font-size: 6.4rem;
+      margin-bottom: 0.5312em;
+    }
+
+    .paragraph-style {
+      font-size: 1.8rem;
+      line-height: 1.444;
+      text-align: center;
+      max-width: 54rem;
+      margin-bottom: 1.777em;
+    }
+  }
+}
+
+/**************************************    Hero Section    ****************************************/
+
+.container-gallery {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 90em) {
+  .hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.container-logo {
+  width: 100%;
+  text-align: center;
+}
+
+.logo {
+  margin: 4.4rem 0 5.4rem;
+}
+
+.hero-img-1 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img-1::after {
+  content: "";
+  display: block;
+  background-image: url(/assets/img/tablet/image-hero.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 15.3rem;
+  padding: 0;
+  margin-left: -5.2%;
+  margin-right: -5.2%;
+  margin-bottom: 4.8rem;
+}
+
+.hero-content,
+.container-gallery,
+.container-benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2.4rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-secondary:link,
+.btn-secondary:visited {
+  max-width: 13.9rem;
+  background-color: var(--color-primary-2);
+  padding: 1em 1.8em;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background-color: #b18bdd;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 60rem;
+  column-gap: 2.5rem;
+  row-gap: 2.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.item {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.item > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-benefits {
+  margin-bottom: 14em;
+}
+
+/********************************* Footer *******************************************************/
+.footer {
+  width: 100%;
+  height: 54rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(assets/img/mobile/image-footer.jpg);
+
+  position: relative;
+}
+
+.footer-overlay {
+  color: #fff;
+  background-color: rgb(77, 150, 168, 0.8955);
+  width: 100%;
+  height: 54rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 2.4em;
+}
+
+.footer-overlay > .heading-secondary {
+  color: #fff;
+}
+.footer-overlay > .btn {
+  margin: 0;
+}
+
+.footer > .divider {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: -140px;
+  transform: translate(-50%, 28px);
+}
